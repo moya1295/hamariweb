@@ -1,5 +1,5 @@
 """
-This is python script to analyse names obtained from hamariweb scrapes. I have writter multiple
+This is python script to analyse names obtained from hamariweb scrapes. I have written multiple
 functions to use for doing analysis eg. finding palindrom names, finding 3 vowels names, finding 7 char names.
 I will be adding more functions to this script as needed.
 Author: Muhammad Owais
@@ -9,7 +9,7 @@ Date: 27-12-2022
 import pandas as pd
 
 ### Select file which you want to do analysis on
-filename = ""
+filename = "final_girls_data.csv"
 
 df = pd.read_csv(filename)
 
@@ -37,6 +37,8 @@ def find_palindrome_names():
     for row in df.iterrows():
         if check_palindrome(row[1][0]):
             print (row)
+            print ("")
+            print ("")
 
 ### Find names by number of vowels eg. if num_vowels = 2 it will output "Ali" "Umar" "Usman"
 def find_num_of_vowels(num_vowels):
@@ -65,3 +67,8 @@ def find_one_word_name(some_length):
         length = row[1][7].split(" ")[-2]
         if length == some_length:
             print (row)
+            print ("")
+            print ("")
+
+
+print (find_palindrome_names())

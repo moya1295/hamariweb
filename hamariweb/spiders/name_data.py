@@ -12,7 +12,7 @@ import csv
 
 class boys_name_data(scrapy.Spider):
     name = "name_data"
-    filename = "links_girl.csv"
+    filename = "data.csv"
     start_urls = []
 
     ### read urls from csv file provided and append to start_urls

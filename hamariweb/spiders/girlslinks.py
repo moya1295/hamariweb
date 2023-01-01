@@ -13,7 +13,7 @@ class namelinks(scrapy.Spider):
 
     ### make a list of start urls, the names are divided as per starting character
     for character in string.ascii_lowercase:
-        start_urls.append(f"https://hamariweb.com/names/muslim-girls-names-starting-with-{character}/page-1")
+        start_urls.append(f"https://hamariweb.com/names/muslim-girl-names-starting-with-{character}/page-1")
 
 
     def parse(self, response):
